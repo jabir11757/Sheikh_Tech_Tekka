@@ -48,7 +48,7 @@ const Signup = () => {
                 <Button variant="dark" type="submit"> Sign Up </Button>
             </div>
             <Form.Text className="text-danger"> </Form.Text>
-            <small><p className=""> Already have an account ? <Link>Please Login</Link></p></small>
+            <small><p className=""> Already have an account ? <Link to='/login'>Please Login</Link></p></small>
         </Form>
     );
 };

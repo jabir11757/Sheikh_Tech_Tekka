@@ -8,24 +8,30 @@ const auth = getAuth(app);
 
 const ProviderContexts = ({ children }) => {
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const createUser = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     const logIn = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password);
     }
 
     const googleSignIn = (provider) => {
+        setLoading(true)
         return signInWithPopup(auth, provider);
     }
 
     const githubSignIn = (provider) => {
+        setLoading(true)
         return signInWithPopup(auth, provider);
     }
 
     const logOut = () => {
+        setLoading(true)
         return signOut(auth)
     }
 
@@ -33,11 +39,12 @@ const ProviderContexts = ({ children }) => {
         onAuthStateChanged(auth, (currentUser) => {
             console.log(currentUser);
             setUser(currentUser)
+            setLoading(false)
         })
     }, [])
 
     // const user = { displayName: 'jabir' }
-    const userInfo = { user, createUser, logIn, googleSignIn, githubSignIn, logOut };
+    const userInfo = { user, loading, createUser, logIn, googleSignIn, githubSignIn, logOut };
 
     return (
         <AuthContext.Provider value={userInfo}>

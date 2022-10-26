@@ -4,6 +4,7 @@ import Courses from '../../components/Courses/Courses/Courses'
 import FAQ from '../../components/FAQ/FAQ';
 import Login from '../../components/Login/Login';
 import Signup from '../../components/Signup/Signup';
+import PrivateRoute from '../../contexts/PrivateRoute/PrivateRoute';
 import Main from '../../layout/Main';
 
 

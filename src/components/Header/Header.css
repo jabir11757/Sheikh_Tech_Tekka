@@ -7,11 +7,3 @@
     text-decoration: none;
     color: rgb(180, 189, 189);
 }
-
-.user-name {
-    display: none;
-}
-
-.user-photo:hover {
-    display: block;
-}
