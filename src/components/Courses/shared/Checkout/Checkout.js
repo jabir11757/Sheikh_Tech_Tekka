@@ -21,7 +21,7 @@ const Checkout = () => {
                             <Button variant="outline-dark" type="submit"> Confirm </Button>
                         </div>
                     </Form>
-                    <Link class="btn btn-outline-dark d-flex align-items-center">Go somewhere</Link>
+                    <Link class="btn btn-outline-dark d-flex align-items-center">Free Courses</Link>
                 </div>
                 <div class="card-footer text-muted">Thanks for visit</div>
             </div>

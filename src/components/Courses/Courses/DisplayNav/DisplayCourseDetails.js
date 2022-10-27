@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import './DisplayCourseDetails.css'
 
@@ -13,7 +14,11 @@ const DisplayCourseDetails = () => {
                     <h6 class="card-header bg-dark text-white">{details.title}</h6>
                     <div class="card-body">
                         <img style={{ height: "200px" }} src={details.picture} alt='' />
-                        <Link to='/courses' class="btn btn-outline-dark d-flex align-items-center">Go Back</Link>
+
+                        <div className='d-flex'>
+                            <Button className='btn-map w-50 me-2' variant='outline-dark' ><Link to='/checkout'>Get Premium</Link></Button>
+                            <Button className='btn-map w-50 me-2' variant='outline-dark'><Link to='/courses'>Go Back</Link></Button>
+                        </div>
                     </div>
                     <div class="card-footer">Course Videos: {details.courses}</div>
                 </div>
