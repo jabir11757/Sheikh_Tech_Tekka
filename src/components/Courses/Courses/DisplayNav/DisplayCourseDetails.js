@@ -10,7 +10,7 @@ const DisplayCourseDetails = () => {
             <h1 className='text-center text-bolder mt-4'>{details.coursesName}</h1>
             <div className='mt-4'>
                 <div class="card text-center w-50 mx-auto">
-                    <h6 class="card-header">{details.title}</h6>
+                    <h6 class="card-header bg-dark text-white">{details.title}</h6>
                     <div class="card-body">
                         <img style={{ height: "200px" }} src={details.picture} alt='' />
                         <Link to='/courses' class="btn btn-outline-dark d-flex align-items-center">Go Back</Link>
@@ -19,8 +19,8 @@ const DisplayCourseDetails = () => {
                 </div>
             </div>
             <div className='content w-100 mt-5 text-center shadow-lg p-3 mb-5 bg-body rounded'>
-                <h3 className='text-success my-3'>Motivation</h3>
-                <h5 className='mb-3'>{details.roadMap}</h5>
+                <h3 className='text-dark my-3'>Motivation</h3>
+                <h6 className='mb-3'>{details.roadMap}</h6>
             </div>
         </div>
     );

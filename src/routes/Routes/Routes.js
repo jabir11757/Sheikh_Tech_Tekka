@@ -3,7 +3,6 @@ import Blog from '../../components/Blogs/Blog';
 import Courses from '../../components/Courses/Courses/Courses'
 import DisplayCourseDetails from '../../components/Courses/Courses/DisplayNav/DisplayCourseDetails';
 import Checkout from '../../components/Courses/shared/Checkout/Checkout';
-import LeftSideNav from '../../components/Courses/shared/LeftSideNav';
 import FAQ from '../../components/FAQ/FAQ';
 import Login from '../../components/Login/Login';
 import Signup from '../../components/Signup/Signup';
