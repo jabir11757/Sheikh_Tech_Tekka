@@ -1,3 +1,8 @@
+.site-name a {
+    text-decoration: none;
+    color: azure;
+}
+
 .me-auto a {
     text-decoration: none;
     color: rgb(180, 189, 189);

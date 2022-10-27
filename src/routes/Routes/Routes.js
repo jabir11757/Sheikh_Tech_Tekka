@@ -4,6 +4,7 @@ import Courses from '../../components/Courses/Courses/Courses'
 import DisplayCourseDetails from '../../components/Courses/Courses/DisplayNav/DisplayCourseDetails';
 import Checkout from '../../components/Courses/shared/Checkout/Checkout';
 import FAQ from '../../components/FAQ/FAQ';
+import Home from '../../components/Home/Home';
 import Login from '../../components/Login/Login';
 import Signup from '../../components/Signup/Signup';
 import PrivateRoute from '../../contexts/PrivateRoute/PrivateRoute';
@@ -16,6 +17,10 @@ export const routes = createBrowserRouter([
         path: '/',
         element: <Main />,
         children: [
+            {
+                path: '/',
+                element: <Home />
+            },
             {
                 path: '/courses',
                 element: <Courses />,

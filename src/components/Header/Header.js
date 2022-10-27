@@ -5,7 +5,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/ProviderContexts/ProviderContexts';
 import './Header.css'
-import { Button } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image'
 import { FaUserAlt } from "react-icons/fa";
 
@@ -21,7 +20,7 @@ const Header = () => {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand>Sheikh Tech Tekka</Navbar.Brand>
+                <Navbar.Brand className='site-name'><Link to='/'>Sheikh Tech Tekka</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
