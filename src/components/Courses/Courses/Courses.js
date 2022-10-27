@@ -12,18 +12,6 @@ const Courses = () => {
                 <Content />
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
     );
 };

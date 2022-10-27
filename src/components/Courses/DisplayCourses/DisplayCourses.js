@@ -13,7 +13,7 @@ const DisplayCourses = ({ course }) => {
                 <img className="rounded-circle m-2" style={{ height: '150px' }} src={picture} alt="..." />
                 <div class="card-body">
                     <h5 className="text-center">{name}</h5>
-                    <Button className='btn-map' variant='dark' ><Link to={`/category/:${id}`}>See Roadmap</Link></Button>
+                    <Button className='btn-map' variant='dark' ><Link to={`/category/${id}`}>See Roadmap</Link></Button>
                 </div>
             </div>
         </div>

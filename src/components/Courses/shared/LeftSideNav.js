@@ -1,36 +1,26 @@
-import React, { useState } from 'react';
-import { Button, Offcanvas } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
+import { Link, useLoaderData } from 'react-router-dom';
 import './LeftSideNav.css'
 
 const LeftSideNav = () => {
+    // const category = useLoaderData();
+    const [categories, setCategories] = useState([]);
 
-    const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    useEffect(() => {
+        fetch('http://localhost:5000/categories')
+            .then(res => res.json())
+            .then(data => setCategories(data))
+    }, [])
+
     return (
-        <div className='w-25 text-center'>
-            <>
-                <Button variant="primary" onClick={handleShow}>
-                    See all courses
-                </Button>
-
-                <Offcanvas style={{ marginTop: '72px' }} className='w-25' show={show} onHide={handleClose}>
-                    <Offcanvas.Header closeButton>
-                        <Offcanvas.Title>Courses</Offcanvas.Title>
-                    </Offcanvas.Header>
-                    <Offcanvas.Body>
-                        <div className='d-flex flex-column w-75 mx-auto'>
-                            <Button variant='dark' className='btn-category'>Category</Button>
-                            <Button variant='dark' className='btn-category'>Category</Button>
-                            <Button variant='dark' className='btn-category'>Category</Button>
-                            <Button variant='dark' className='btn-category'>Category</Button>
-                            <Button variant='dark' className='btn-category'>Category</Button>
-                            <Button variant='dark' className='btn-category'>Category</Button>
-                        </div>
-                    </Offcanvas.Body>
-                </Offcanvas>
-            </>
+        <div className='w-25 mt-5 text-center'>
+            {
+                categories.map(category => <p key={category.category_id}>
+                    <Button className='btn-nav w-75 mt-3' variant='dark'><Link to={`/category/${category.category_id}`}>{category.coursesName}</Link></Button>
+                </p>)
+            }
         </div>
     );
 };
