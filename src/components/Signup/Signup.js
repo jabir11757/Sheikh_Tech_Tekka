@@ -7,6 +7,7 @@ import { AuthContext } from '../../contexts/ProviderContexts/ProviderContexts';
 const Signup = () => {
     const { createUser } = useContext(AuthContext);
 
+
     const handleSignup = (event) => {
         event.preventDefault();
         const form = event.target;
