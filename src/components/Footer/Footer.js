@@ -12,8 +12,8 @@ const Footer = () => {
                 <p className='mx-5'><FaLinkedin /></p>
                 <p className='mx-5'><FaTwitter /></p>
             </div>
-            <div className='mt-5'>
-                <div className='d-flex justify-content-center mt-5'>@Sheikh Tech | Developed by Owner</div>
+            <div className='mt-2'>
+                <div className='d-flex justify-content-center mt-2'>@Sheikh Tech | Developed by Owner</div>
             </div>
         </div>
     );
