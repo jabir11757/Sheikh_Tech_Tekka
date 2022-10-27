@@ -61,12 +61,10 @@ const Login = () => {
                 <Form.Label>Password</Form.Label>
                 <Form.Control name="password" type="password" placeholder="Password" />
             </Form.Group>
-            <Button variant="dark" type="submit"> Log In </Button>
+            <Button className='mb-2' variant="dark" type="submit"> Log In </Button>
 
-            <div className='d-flex justify-content-center mb-4'>
-                <Button variant="dark" type="submit"> Log In </Button>
-            </div>
-            <Form.Text className="text-danger"> </Form.Text>
+            {/* <Form.Text className="text-danger">Password did't match</Form.Text> */}
+
             <small><p className=""> Forget Password ? <Link>Reset</Link></p></small>
             <small><p>Don't have account ? Please <Link to='/signup'>register</Link></p></small>
 
