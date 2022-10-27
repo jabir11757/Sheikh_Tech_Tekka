@@ -6,7 +6,7 @@ const Blog = () => {
     return (
         <div className='blog-container'>
 
-            <h2 className='mb-5 text-success d-flex justify-content-center'>We need to know</h2>
+            <h2 className='mb-5 text-dark d-flex justify-content-center'>We need to know</h2>
             <Accordion >
                 <Accordion.Item eventKey="0">
                     <Accordion.Header><p className='fw-bold'> what is cors?</p></Accordion.Header>

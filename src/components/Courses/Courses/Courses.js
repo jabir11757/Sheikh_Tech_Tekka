@@ -1,9 +1,29 @@
 import React from 'react';
+import Content from '../shared/Content';
+import LeftSideNav from '../shared/LeftSideNav';
 
 const Courses = () => {
     return (
         <div>
-            This is courses
+
+            <div className='d-flex'>
+                <LeftSideNav />
+
+                <Content />
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
     );
 };
